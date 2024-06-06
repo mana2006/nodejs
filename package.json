@@ -16,6 +16,8 @@
     "firebase": "^8.6.8",
     "firebase-admin": "^12.1.1",
     "generate-api-key": "^1.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.13",
     "stripe": "^15.9.0"
   },
   "devDependencies": {
