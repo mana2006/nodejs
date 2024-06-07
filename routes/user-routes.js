@@ -1,5 +1,8 @@
 const express = require('express');
-const { userSignup, userSignin, beforeSignup, beforeSignin } = require('../controllers/userController');
+const {beforeSignup,
+    userSignup,
+    beforeSignin,
+    userSignin} = require('../controllers/authController');
 
 const router = express.Router();
 
