@@ -1,3 +1,5 @@
+const nodeMailer = require('nodemailer');
+
 const makeid = function (length, flag = true) {
   let result = '';
   let characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -22,8 +24,33 @@ const validateEmail = (email) => {
     );
 };
 
+const sendAuth = async (email, subject, contentHTML) => {
+  try {
+    const transporter = nodeMailer.createTransport({
+        service: 'gmail',
+        host: process.env.EMAIL_HOST,
+        port: process.env.EMAIL_PORT,
+        secure: false,
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+        }
+    })
+    await transporter.sendMail({
+        from: 'no-reply@example.com',
+        to: email,
+        subject: subject,
+        html: contentHTML
+    })
+    return true;
+  } catch (error) {
+    return error.message;
+  }
+}
+
 
 module.exports = {
   makeid,
-  validateEmail
+  validateEmail,
+  sendAuth
 }
