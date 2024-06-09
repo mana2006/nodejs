@@ -26,7 +26,7 @@ const Auth = () => {
         async function signIn(userInfo) {
             const data = await axios({
                 method: "post",
-                url: "http://localhost:8000/api/auth/signin",
+                url: process.env.REACT_APP_BACKEND_HOST_URL + ":" + process.env.REACT_APP_BACKEND_PORT + "/api/auth/signin",
                 data: userInfo
             });
             return data;
