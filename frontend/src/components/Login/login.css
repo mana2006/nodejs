@@ -1,0 +1,50 @@
+
+.login-image-logo {
+    width: 20%;
+}
+
+.login-form-content {
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    padding-top: 9%;
+    text-align: center;
+}
+
+.login-valid-message {
+    color: red;
+}
+
+input[type=email] {
+    border: none;
+    color: #0d0d0d;
+    padding: 9px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #130000;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.login-button-custom {
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.login-font-size-privacy {
+    font-size: 0.9rem;
+}
+
+.login-font-size {
+    font-size: 0.7rem;
+}
