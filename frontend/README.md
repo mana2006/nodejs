@@ -11,6 +11,10 @@ Copy `.env-copy` to `.env` and update your `.env` configuration file <br><br>
 `npm install` <br>
 
 ## Structure :
-- Check validate input email after submit
-- Code auth will send to email user and redirect to auth page
+- Login Component
+- Auth Component
+## Run
+`npm run start`
+- Client input email -> check email before send auth code
+- Auth code will send to email user and redirect to auth page
 - After finish check auth code in backend, frontend will store access token for activities in the future.
